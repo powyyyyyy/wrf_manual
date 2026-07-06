@@ -96,7 +96,8 @@ Digunakan skema **triple nesting (1-way/2-way)** dengan rasio pembesaran grid st
 | **D03** | Skala Mikro (resolusi tinggi) | **3 km** | Pesisir selatan Jateng–DIY: Cilacap, Kebumen, Purworejo, DIY | 1:3 dari D02 |
 
 > ⚙️ **Catatan teknis:** Rasio 27 km → 9 km → 3 km dipilih agar `time_step` model (umumnya `6× resolusi_D01_dalam_km` sebagai estimasi awal, atau ±150–162 detik untuk D01 27 km) tetap stabil, sekaligus D03 3 km sudah masuk kategori *convection-permitting scale* sehingga skema kumulus pada domain terdalam dapat dinonaktifkan (`cu_physics = 0` untuk D03) demi merepresentasikan konveksi secara eksplisit — krusial untuk menangkap sabuk hujan siklon secara realistis.
-<img width="1920" height="1080" alt="1345660" src="https://github.com/user-attachments/assets/53c37296-dcc8-4084-8ebf-b14b77164b35" />
+<img width="616" height="322" alt="Screenshot 2026-07-06 172031" src="https://github.com/user-attachments/assets/3a4e22cd-c827-4660-b886-d7c70e2072b4" />
+
 
 ---
 
