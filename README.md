@@ -128,6 +128,7 @@ Data ERA5 diunduh dari **Copernicus Climate Data Store (CDS)** mencakup dua jeni
 | **Single/Surface Levels** | Permukaan | Variabel 2D: SST, soil temperature/moisture, mslp, 2m temp, 10m wind, snow cover |
 
 WEBSITE CLIMATE DATA STORE : https://cds.climate.copernicus.eu/datasets
+
 <img width="386" height="122" alt="Screenshot 2026-07-06 172443" src="https://github.com/user-attachments/assets/0b57c46a-5752-4d8a-8705-4c98d3b45951" />
 
 
@@ -169,7 +170,7 @@ cd comsoftware/wrf/WPS-4.3
  max_dom = 3,
  start_date = '2017-11-26_00:00:00','2017-11-26_00:00:00','2017-11-26_00:00:00',
  end_date   = '2017-11-29_23:00:00','2017-11-29_23:00:00','2017-11-29_23:00:00',
- interval_seconds = 21600,
+ interval_seconds = 3600,
 /
 
 &geogrid
@@ -200,7 +201,7 @@ cd comsoftware/wrf/WPS-4.3
 /
 ```
 
-> ⚠️ Sesuaikan `e_we`, `e_sn`, `i_parent_start`, `j_parent_start` dengan hasil final dari **WRF Domain Wizard** pada Bab 2 — nilai di atas adalah contoh ilustratif untuk cakupan D03 di pesisir selatan Jateng–DIY.
+> ⚠️ Sesuaikan `e_we`, `e_sn`, `i_parent_start`, `j_parent_start` dengan hasil final dari **WRF Domain Wizard** pada Bab 2 — nilai di atas adalah contoh ilustratif.
 
 ### 4.2 Menjalankan Geogrid
 
@@ -276,7 +277,7 @@ Parameter waktu krusial:
  run_seconds             = 0,
  start_date              = '2017-11-26_00:00:00','2017-11-26_00:00:00','2017-11-26_00:00:00',
  end_date                = '2017-11-29_23:00:00','2017-11-29_23:00:00','2017-11-29_23:00:00',
- interval_seconds        = 21600,
+ interval_seconds        = 3600,
  input_from_file         = .true.,.true.,.true.,
  history_interval        = 60,  60,  60,
  auxinput4_inname        = 'wrflowinp_d<domain>',
