@@ -1,5 +1,5 @@
 🌪️ Simulasi Numerik WRF-ARW: Dinamika Siklon Tropis Cempaka (26–29 November 2017)
-![WRF](https://img.shields.io/badge/WRF--ARW-v4.3-blue) ![WPS](https://img.shields.io/badge/WPS-v4.3-orange) ![Docker](https://img.shields.io/badge/Container-dtcenter%2Fwps__wrf-2496ED?logo=docker&logoColor=white) ![Data](https://img.shields.io/badge/Input-ERA5%20Reanalysis-green) ![License](https://img.shields.io/badge/License-MIT-lightgrey)
+
 Repositori ini berisi konfigurasi, dokumentasi teknis, dan alur kerja (workflow) lengkap untuk menjalankan simulasi numerik WRF-ARW (Weather Research and Forecasting – Advanced Research WRF) v4.3 guna membedah struktur dinamika dan penjalaran sabuk hujan (rainband) Siklon Tropis Cempaka.
 ---
 📋 Daftar Isi
