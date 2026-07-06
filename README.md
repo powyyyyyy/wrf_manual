@@ -127,34 +127,9 @@ Data ERA5 diunduh dari **Copernicus Climate Data Store (CDS)** mencakup dua jeni
 | **Pressure Levels** | Multi-level (1000–1 hPa) | Variabel 3D: geopotential, temperature, u/v wind, relative humidity |
 | **Single/Surface Levels** | Permukaan | Variabel 2D: SST, soil temperature/moisture, mslp, 2m temp, 10m wind, snow cover |
 
-Contoh permintaan via **CDS API** (`cdsapi` Python):
+WEBSITE CLIMATE DATA STORE : https://cds.climate.copernicus.eu/datasets
+<img width="386" height="122" alt="Screenshot 2026-07-06 172443" src="https://github.com/user-attachments/assets/0b57c46a-5752-4d8a-8705-4c98d3b45951" />
 
-```python
-import cdsapi
-c = cdsapi.Client()
-
-# 1) Pressure Level Data
-c.retrieve('reanalysis-era5-pressure-levels', {
-    'product_type': 'reanalysis',
-    'variable': ['geopotential', 'temperature', 'u_component_of_wind',
-                 'v_component_of_wind', 'relative_humidity'],
-    'pressure_level': ['1000','925','850','700','500','300','200','100'],
-    'year': '2017', 'month': '11', 'day': ['26','27','28','29'],
-    'time': [f'{h:02d}:00' for h in range(0, 24, 6)],
-    'format': 'grib',
-}, 'ERA5_PL_cempaka_20171126_29.grib')
-
-# 2) Surface/Single Level Data (termasuk SST)
-c.retrieve('reanalysis-era5-single-levels', {
-    'product_type': 'reanalysis',
-    'variable': ['2m_temperature', '10m_u_component_of_wind', '10m_v_component_of_wind',
-                 'mean_sea_level_pressure', 'sea_surface_temperature',
-                 'skin_temperature', 'soil_temperature_level_1', 'snow_depth'],
-    'year': '2017', 'month': '11', 'day': ['26','27','28','29'],
-    'time': [f'{h:02d}:00' for h in range(0, 24, 6)],
-    'format': 'grib',
-}, 'ERA5_SFC_cempaka_20171126_29.grib')
-```
 
 ### 3.3 Memindahkan Data ke Dalam Container (`docker cp`)
 
